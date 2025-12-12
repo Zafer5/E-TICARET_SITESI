@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | GZCSHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">GZC<span>SHOP</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="products.html">Ürünler</a></li>
+                <li><a href="comparison.html">Karşılaştır</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html" class="active">İletişim</a></li>
+                <li><a href="orders.html">Siparişlerim</a></li>
+            </ul>
+            <div class="nav-search">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Ürün ara..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="nav-icons">
+                <button id="theme-toggle" class="btn-icon"
+                    style="background: none; border: none; color: inherit; font-size: 1.2rem; cursor: pointer; margin-right: 15px;">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>İletişim</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Ana Sayfa</a> / İletişim
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Top Section (Map & Info) -->
+    <section class="section contact-top-section">
+        <div class="container">
+            <div class="contact-top-wrapper">
+                <!-- Map Side -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9633698339308!2d28.993048715006075!3d41.04793012501022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab746370630a5%3A0xce38860c4633d00a!2zTmnFZWFudGHFn8SxLCDFnmnFZmxpLCIDNC4zNjY!5e0!3m2!1str!2str!4v1623333333333!5m2!1str!2str"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- Info Side -->
+                <div class="contact-info-card">
+                    <a href="#" class="faq-btn">Sıkça Sorulan Sorular</a>
+
+                    <div class="info-group">
+                        <span class="info-label">Pzt - Cum: 09:00-18:00 Çevrimiçi</span>
+                        <h3>MÜŞTERİ HİZMETLERİ</h3>
+                        <div class="info-item">
+                            <i class="fas fa-fax"></i>
+                            <span>+90 (212) 912 2133 Fax</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+90 (212) 232 9232</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 (555) 003 6677</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@gzcshop.com.tr</span>
+                        </div>
+                    </div>
+
+                    <div class="info-group">
+                        <h3>BEŞİKTAŞ - İSTANBUL</h3>
+                        <p>Nisbetiye, Gazi Güçnar Sk. Uygur İş Merkezi<br>No: 4/2 Gayrettepe - Zincirlikuyu P.K: 34340
+                        </p>
+                    </div>
+
+                    <div class="social-icons-row">
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Bottom Section (Form) -->
+    <section class="section contact-bottom-section">
+        <div class="container">
+            <div class="form-header">
+                <span class="sub-title">7/24 İLETİŞİM</span>
+                <h2>MESAJ GÖNDER</h2>
+                <p>Bazı kişisel verileriniz işlenmektedir. Web sitemizin footer alanında yer alan Aydınlatma Metni
+                    sayfasından detaylı bilgi edinebilirsiniz.</p>
+            </div>
+
+            <form class="contact-form-wide">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ad / Soyad</label>
+                        <input type="text" placeholder="Merhaba Sayın..." class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Konu</label>
+                        <input type="text" placeholder="Web Tasarım, SEO, Reklam, Sosyal Medya Yönetimi"
+                            class="form-input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="text" placeholder="Örnek: 2122329232" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>E-Mail Adresi</label>
+                        <input type="email" placeholder="Örnek: isimsoyisim@gzcshop.com.tr" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Mesajınız</label>
+                    <textarea placeholder="Nasıl yardımcı olabiliriz?" class="form-input" rows="4"></textarea>
+                    <div class="char-count">0 / 2000</div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-wide">GÖNDER</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Toplam:</span>
+                <span id="cart-total">0.00 ₺</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Ödemeye Geç</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <a href="index.html" class="logo"
+                    style="color: white; font-size: 1.5rem; margin-bottom: 10px; display: block;">GZC<span>SHOP</span></a>
+                <p>&copy; 2025 GZCSHOP. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="payment-logos">
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fas fa-credit-card" title="Troy"></i>
+            </div>
+            <div class="footer-links">
+                <a href="#">KVKK Aydınlatma Metni</a>
+                <a href="#">Gizlilik Politikası</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

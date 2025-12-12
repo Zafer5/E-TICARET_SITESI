@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZCSHOP | Premium E-Ticaret</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">GZC<span>SHOP</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="products.html">Ürünler</a></li>
+                <li><a href="comparison.html">Karşılaştır</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="orders.html">Siparişlerim</a></li>
+            </ul>
+            <div class="nav-search">
+                <button type="button" class="search-button" id="search-toggle-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="nav-icons">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="comparison.html" class="icon-btn" id="compare-btn">
+                    <i class="fas fa-balance-scale"></i>
+                    <span class="badge" id="compare-count">0</span>
+                </a>
+                <button class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-subtitle">Premium Koleksiyon</span>
+            <h1>Tarzını <br><span>Yansıt</span></h1>
+            <p>En yeni koleksiyonlarımızla stilini keşfet. Premium kalite, eşsiz tasarımlar ve sana özel fırsatlar.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Alışverişe Başla</a>
+                <a href="#categories" class="btn btn-outline">Koleksiyonu İncele</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories section">
+        <div class="container">
+            <h2 class="section-title">Kategoriler</h2>
+            <div class="categories-grid">
+                <a href="products.html#Giyim" class="category-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Giyim</h3>
+                </a>
+                <a href="products.html#Ayakkabı" class="category-card">
+                    <i class="fas fa-shoe-prints"></i>
+                    <h3>Ayakkabı</h3>
+                </a>
+                <a href="products.html#Elektronik" class="category-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Elektronik</h3>
+                </a>
+                <a href="products.html#Aksesuar" class="category-card">
+                    <i class="fas fa-glasses"></i>
+                    <h3>Aksesuar</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Öne Çıkan Ürünler</h2>
+                <a href="products.html" class="btn btn-outline">Tüm Ürünler</a>
+            </div>
+            <div class="products-grid featured-products-grid" id="featured-products-container">
+                <!-- Featured products will be inserted here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products section">
+        <div class="container">
+            <h2 class="section-title">Popüler Ürünler</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Products will be inserted here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <h2 class="section-title">Müşteri Yorumları</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Premium Deri Ceket harika bir ürün. Kalitesi gerçekten üst düzey ve kargo süresi de çok hızlıydı."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Ahmet K.</h4>
+                            <p>Premium Deri Ceket</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Kablosuz Kulaklık ses kalitesi muazzam. Pil ömrü de beklediğim gibi uzun. Kesinlikle tavsiye ederim."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Ayşe S.</h4>
+                            <p>Kablosuz Kulaklık</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sneaker Ayakkabı hem şık hem de rahat. Spor salonuna gitmeden günlük kullanımda da çok uygun."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MY</div>
+                        <div class="author-info">
+                            <h4>Mehmet Y.</h4>
+                            <p>Sneaker Ayakkabı</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter section">
+        <div class="container newsletter-wrapper">
+            <div class="newsletter-content">
+                <h2>Yeni Ürünlerden Haberdar Olun</h2>
+                <p>Haftalık indirimler ve yeni koleksiyonlardan ilk siz haberdar olun.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="E-posta adresinizi girin" required>
+                <button type="submit" class="btn btn-primary">Abone Ol</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="search-modal">
+        <div class="search-modal-content">
+            <button class="search-modal-close" id="search-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <form id="search-form" class="search-modal-form">
+                <input type="text" id="search-input" placeholder="Ürün ara..." class="search-modal-input" autofocus>
+                <button type="submit" class="search-modal-submit">
+                    <i class="fas fa-search"></i>
+                    Ara
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be here -->
+            <div class="empty-cart-msg">Sepetiniz boş.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Toplam:</span>
+                <span id="cart-total">0.00 ₺</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Ödemeye Geç</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <a href="index.html" class="logo"
+                    style="color: white; font-size: 1.5rem; margin-bottom: 10px; display: block;">GZC<span>SHOP</span></a>
+                <p>&copy; 2025 GZCSHOP. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="payment-logos">
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fas fa-credit-card" title="Troy"></i>
+            </div>
+            <div class="footer-links">
+                <a href="#">KVKK Aydınlatma Metni</a>
+                <a href="#">Gizlilik Politikası</a>
+            </div>
+            <p>BU SİTE ZAFER GEZİCİ TARAFINDAN YAPILMIŞ OLUP TÜM HAKLARI SAKLIDIR</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

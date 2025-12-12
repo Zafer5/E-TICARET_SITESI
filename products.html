@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünler | GZC SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">GZC<span>SHOP</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="products.html" class="active">Ürünler</a></li>
+                <li><a href="comparison.html">Karşılaştır</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="orders.html">Siparişlerim</a></li>
+            </ul>
+            <div class="nav-search">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Ürün ara..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="nav-icons">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="comparison.html" class="icon-btn" id="compare-btn">
+                    <i class="fas fa-balance-scale"></i>
+                    <span class="badge" id="compare-count">0</span>
+                </a>
+                <button class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Tüm Ürünler</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Ana Sayfa</a> / Ürünler
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="category-filter">Kategori:</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">Tüm Kategoriler</option>
+                        <option value="Giyim">Giyim</option>
+                        <option value="Ayakkabı">Ayakkabı</option>
+                        <option value="Elektronik">Elektronik</option>
+                        <option value="Aksesuar">Aksesuar</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sırala:</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="default">Varsayılan</option>
+                        <option value="price-low">Fiyata göre (Düşükten Yükseğe)</option>
+                        <option value="price-high">Fiyata göre (Yüksekten Düşüğe)</option>
+                        <option value="rating">Puana göre</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products section">
+        <div class="container">
+            <div class="products-grid" id="products-container">
+                <!-- Products will be inserted here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Toplam:</span>
+                <span id="cart-total">0.00 ₺</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Ödemeye Geç</a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 ModernShop. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="payment-logos">
+                <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fab fa-cc-visa" title="Visa"></i>
+                <i class="fas fa-credit-card" title="Troy"></i>
+            </div>
+            <div class="footer-links">
+                <a href="#">KVKK Aydınlatma Metni</a>
+                <a href="#">Gizlilik Politikası</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme | GZC SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .checkout-container {
+            padding-top: 100px;
+            padding-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card-details {
+            background-color: var(--gray-100);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .order-summary {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .summary-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--gray-200);
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        .summary-product {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .summary-product img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--gray-200);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .checkout-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .checkout-steps::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--gray-200);
+            z-index: 1;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .step-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .step.active .step-icon {
+            background-color: var(--primary-color);
+        }
+
+        .step.completed .step-icon {
+            background-color: var(--success-color);
+        }
+
+        .step-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .step.active .step-label {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">GZC<span>SHOP</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="products.html">Ürünler</a></li>
+                <li><a href="comparison.html">Karşılaştır</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="orders.html">Siparişlerim</a></li>
+            </ul>
+            <div class="nav-search">
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Ürün ara..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="nav-icons" style="margin-left: auto; display: flex; align-items: center; gap: 15px;">
+                <button id="theme-toggle" class="btn-icon"
+                    style="background: none; border: none; color: inherit; font-size: 1.2rem; cursor: pointer;">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="index.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Alışverişe
+                    Dön</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container checkout-container">
+        <!-- Checkout Steps -->
+        <div class="checkout-steps">
+            <div class="step completed">
+                <div class="step-icon">1</div>
+                <div class="step-label">Sepet</div>
+            </div>
+            <div class="step active">
+                <div class="step-icon">2</div>
+                <div class="step-label">Ödeme</div>
+            </div>
+            <div class="step">
+                <div class="step-icon">3</div>
+                <div class="step-label">Tamamlandı</div>
+            </div>
+        </div>
+        
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Ödeme Bilgileri
+            </h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <input type="text" class="form-control" id="customer-name" required placeholder="Adınız Soyadınız">
+                </div>
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" class="form-control" id="customer-email" required placeholder="ornek@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="tel" class="form-control" id="customer-phone" required placeholder="0 (5XX) XXX XX XX">
+                </div>
+                <div class="form-group">
+                    <label>Adres</label>
+                    <textarea class="form-control" id="customer-address" rows="3" required placeholder="Teslimat adresi..."></textarea>
+                </div>
+
+                <div class="card-details">
+                    <h3 style="margin-bottom: 15px;">Kart Bilgileri</h3>
+                    <div class="form-group">
+                        <label>Kart Üzerindeki İsim</label>
+                        <input type="text" class="form-control" id="card-holder" placeholder="KART SAHİBİNİN ADI">
+                    </div>
+                    <div class="form-group">
+                        <label>Kart Numarası</label>
+                        <input type="text" class="form-control" id="card-number" placeholder="0000 0000 0000 0000"
+                            maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Son Kullanma</label>
+                            <input type="text" class="form-control" id="card-expiry" placeholder="AA/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" class="form-control" id="card-cvc" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="margin-top: 30px;">Siparişi
+                    Tamamla</button>
+            </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3 class="summary-title">Sipariş Özeti</h3>
+            <div id="checkout-items">
+                <!-- Items will be inserted here -->
+            </div>
+            <div class="summary-total">
+                <span>Toplam Tutar</span>
+                <span id="checkout-total">0.00 ₺</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load Cart Data for Checkout
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initCheckout === 'function') {
+                initCheckout();
+            } else {
+                console.error('initCheckout function not found');
+            }
+        });
+    </script>
+</body>
+
+</html>
